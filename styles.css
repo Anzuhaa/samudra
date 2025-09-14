@@ -156,7 +156,7 @@ body {
 .hero-content h1 {
   font-size: 3.5rem;
   font-weight: 800;
-  width: 42rem;
+  width: 40rem;
   line-height: 1.1;
   margin-bottom: 2rem;
   color: var(--text-dark);
@@ -435,13 +435,19 @@ body {
 .portfolio-image {
   width: 100%;
   height: 200px;
-  background: linear-gradient(135deg, var(--primary-color), #a78bfa);
+  object-fit: cover;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   font-size: 2rem;
   font-weight: 600;
+}
+
+.portfolio-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
 .portfolio-content {
@@ -494,6 +500,7 @@ body {
 .achievements {
   padding: 6rem 2rem;
   background: var(--bg-light);
+  margin-bottom: 4rem;
 }
 
 .achievements-container {
@@ -595,8 +602,26 @@ body {
   transform: translateY(-2px);
 }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
+/* Small Dekstop Responsive */
+@media (max-width: 1240px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    grid-template-areas:
+      "image"
+      "content";
+    text-align: center;
+  }
+
+  .image-container {
+    width: 380px;
+    height: 380px;
+  }
+}
+
+/* Tablet Responsive */
+@media (max-width: 840px) {
   .nav {
     padding: 1rem;
   }
@@ -608,6 +633,7 @@ body {
   .hero-container {
     grid-template-columns: 1fr;
     gap: 2rem;
+
     grid-template-areas:
       "image"
       "content";
@@ -615,12 +641,13 @@ body {
   }
 
   .hero-content h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    width: 100%;
   }
 
   .image-container {
-    width: 280px;
-    height: 280px;
+    width: 320px;
+    height: 320px;
   }
 
   .section-title {
@@ -652,8 +679,13 @@ body {
   .achievements-grid {
     grid-template-columns: 1fr;
   }
+  .portfolio-image img {
+    height: 200px;
+    object-fit: cover;
+  }
 }
 
+/* Mobile Responsive */
 @media (max-width: 480px) {
   .skills-grid {
     grid-template-columns: 1fr;
@@ -662,6 +694,20 @@ body {
   .stats-container {
     flex-direction: row;
     gap: 1rem;
+  }
+  .image-container {
+    width: 280px;
+    height: 280px;
+  }
+
+  .skill-card {
+    padding: 2rem 1rem;
+    border-radius: 10% 2% 10% 10%;
+  }
+
+  .portfolio-image img {
+    height: 200px;
+    object-fit: cover;
   }
 }
 
