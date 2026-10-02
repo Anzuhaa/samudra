@@ -1,0 +1,116 @@
+.footer {
+  background: var(--bg-secondary);
+  padding: 4rem 2rem 2rem;
+  position: relative;
+}
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--border-light);
+}
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--border-light);
+}
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.03em;
+}
+.accent {
+  color: var(--accent);
+}
+.tagline {
+  font-size: 0.82rem;
+  color: var(--text-tertiary);
+  font-family: var(--font-mono);
+}
+.cta {
+  text-align: right;
+}
+.ctaTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.4rem;
+  letter-spacing: -0.03em;
+}
+.ctaDesc {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.25rem;
+}
+.socials {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+.socialIcon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  text-decoration: none;
+  border: 1px solid var(--border-light);
+  background: var(--card-bg);
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-sm);
+}
+.socialIcon:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.5rem;
+  gap: 1rem;
+}
+.copy {
+  font-size: 0.78rem;
+  color: var(--text-tertiary);
+}
+.built {
+  font-size: 0.78rem;
+  color: var(--text-tertiary);
+  font-family: var(--font-mono);
+}
+@media (max-width: 640px) {
+  .top {
+    flex-direction: column;
+  }
+  .cta {
+    text-align: left;
+  }
+  .socials {
+    justify-content: flex-start;
+  }
+  .bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

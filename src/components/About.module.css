@@ -1,0 +1,183 @@
+.about {
+  padding: 7rem 2rem;
+  background: var(--bg-secondary);
+}
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.04em;
+  margin-bottom: 0.5rem;
+}
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+.bioCard {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.bioTop {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #0071e3, #34aadc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+.bioName {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+.bioAlias {
+  font-size: 0.8rem;
+  color: var(--text-tertiary);
+  margin-top: 0.1rem;
+}
+.bioText {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+.bioText strong {
+  color: var(--text);
+  font-weight: 600;
+}
+.bioTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.bioTag {
+  font-size: 0.78rem;
+  font-weight: 500;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  color: var(--text-secondary);
+  padding: 0.3rem 0.75rem;
+  border-radius: 50px;
+}
+.timeline {
+  display: flex;
+  flex-direction: column;
+}
+.timelineHeading {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-tertiary);
+  margin-bottom: 1.5rem;
+}
+.timelineItem {
+  display: flex;
+  gap: 1rem;
+}
+.timelineLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+.timelineIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+.timelineLine {
+  width: 1px;
+  flex: 1;
+  background: var(--border-light);
+  margin: 6px 0;
+  min-height: 24px;
+}
+.timelineContent {
+  padding-bottom: 2rem;
+  flex: 1;
+  padding-top: 0.1rem;
+}
+.timelineYear {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 0.2rem;
+}
+.timelineTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.15rem;
+  letter-spacing: -0.02em;
+}
+.timelineSub {
+  font-size: 0.8rem;
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+.timelineDesc {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+[data-anim] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+[data-anim].visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (max-width: 860px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .about {
+    padding: 5rem 1.25rem;
+  }
+}

@@ -1,0 +1,309 @@
+.achievements {
+  padding: 7rem 2rem;
+  background: var(--bg);
+}
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+.title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.04em;
+  margin-bottom: 0.5rem;
+}
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  display: flex;
+  gap: 1.5rem;
+  transition: all 0.25s ease;
+}
+.card:hover {
+  background: var(--card-bg);
+  box-shadow: var(--shadow-md);
+}
+.cardLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+  min-width: 60px;
+}
+.iconWrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon {
+  font-size: 1.3rem;
+}
+.yearTag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+}
+.cardBody {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.cardMeta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.cardTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+.gameTag {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  background: var(--card-bg);
+  border: 1px solid var(--border-light);
+  padding: 0.18rem 0.55rem;
+  border-radius: 50px;
+  font-weight: 500;
+}
+.result {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+.photoGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  align-items: center;
+}
+.photoThumb {
+  width: 80px;
+  height: 60px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  background: var(--border-light);
+  flex-shrink: 0;
+}
+.thumbImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.photoThumb:hover .thumbImg {
+  transform: scale(1.05);
+}
+.thumbOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s;
+  border-radius: 8px;
+}
+.photoThumb:hover .thumbOverlay {
+  opacity: 1;
+}
+.morePhotos {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--accent);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem 0;
+  transition: opacity 0.2s;
+  flex-shrink: 0;
+}
+.morePhotos:hover {
+  opacity: 0.7;
+}
+.comingSoon {
+  font-size: 0.78rem;
+  color: var(--text-tertiary);
+  font-style: italic;
+  margin-top: 0.25rem;
+}
+.lightboxOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  animation: fadeIn 0.2s ease;
+}
+.lightboxContent {
+  background: var(--card-bg);
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 900px;
+  width: 100%;
+  box-shadow: 0 40px 120px rgba(0, 0, 0, 0.4);
+  position: relative;
+  animation: lbSlideUp 0.25s ease;
+}
+.lbClose {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.4);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  z-index: 10;
+  transition: background 0.2s;
+}
+.lbClose:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+.lbImage {
+  width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  display: block;
+  background: #000;
+}
+.lbBottom {
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 1px solid var(--border-light);
+}
+.lbCaption {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+.lbNav {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+.lbBtn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--bg-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  transition: all 0.2s;
+}
+.lbBtn:hover {
+  background: var(--text);
+  color: var(--bg);
+}
+.lbCounter {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  min-width: 40px;
+  text-align: center;
+}
+[data-anim] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+[data-anim].visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes lbSlideUp {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@media (max-width: 640px) {
+  .achievements {
+    padding: 5rem 1.25rem;
+  }
+  .card {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .cardLeft {
+    flex-direction: row;
+    justify-content: flex-start;
+    min-width: unset;
+  }
+  .photoThumb {
+    width: 64px;
+    height: 48px;
+  }
+  .lbImage {
+    max-height: 55vh;
+  }
+  .lbBottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
