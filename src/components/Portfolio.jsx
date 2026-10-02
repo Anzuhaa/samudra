@@ -1,10 +1,12 @@
 import { useEffect, useRef } from 'react'
 import styles from './Portfolio.module.css'
 
+const BASE = import.meta.env.BASE_URL
+
 const projects = [
   {
     title: 'HRIS API — PT Tigapilar Maju Mandiri',
-    image: '/assets/hris_cert.jpg',
+    image: `${BASE}assets/hris_cert.jpg`,
     isCert: true,
     tags: ['Golang', 'REST API', 'PostgreSQL', 'Backend'],
     desc: 'Contributed to developing an internal HRIS (Human Resource Information System) REST API during a 6-month internship. Handled employee data endpoints, authentication, and payroll integration.',
@@ -13,7 +15,7 @@ const projects = [
   },
   {
     title: 'Ocean Learn Backend REST API',
-    image: '/assets/image/oceanlearn.png',
+    image: `${BASE}assets/image/oceanlearn.png`,
     isCert: false,
     tags: ['Laravel', 'PHP', 'REST API', 'Backend'],
     desc: 'Backend developer specializing in Laravel — secure APIs, subscription systems, and payment integrations.',
@@ -22,7 +24,7 @@ const projects = [
   },
   {
     title: 'Echo Cash Design',
-    image: '/assets/image/echo.png',
+    image: `${BASE}assets/image/echo.png`,
     isCert: false,
     tags: ['Figma', 'UI/UX'],
     desc: 'Designed frontend interface and UX for Echo Cash, a mobile-based e-wallet app focusing on clean UI and smooth user flow.',
@@ -31,7 +33,7 @@ const projects = [
   },
   {
     title: 'Ocash Backend System',
-    image: '/assets/image/ocash.png',
+    image: `${BASE}assets/image/ocash.png`,
     isCert: false,
     tags: ['Node.js', 'Backend'],
     desc: "Developed backend for O'Cash — secure peer-to-peer wallet transfers with efficient transaction handling.",

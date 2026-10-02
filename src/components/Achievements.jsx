@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import styles from './Achievements.module.css'
 
+const BASE = import.meta.env.BASE_URL
+
 const achievements = [
   {
     year: '2023 — 2026',
@@ -10,9 +12,9 @@ const achievements = [
     result: 'Core Team Member — Honor of Kings & Mobile Legends',
     color: '#0071e3',
     photos: [
-      { src: '/assets/achievements/RUS_team1.jpg', caption: 'RUS Esport Core Team — JUARA 1 LENP HOK 2025' },
-      { src: '/assets/achievements/RUS_team2.jpg', caption: 'RUS Esport Official Team Photo — LENP HOK 2025' },
-      { src: '/assets/achievements/RUS_team3.jpg', caption: 'RUS Esport Team Celebration — LENP HOK 2025' },
+      { src: `${BASE}assets/achievements/RUS_team1.jpg`, caption: 'RUS Esport Core Team — JUARA 1 LENP HOK 2025' },
+      { src: `${BASE}assets/achievements/RUS_team2.jpg`, caption: 'RUS Esport Official Team Photo — LENP HOK 2025' },
+      { src: `${BASE}assets/achievements/RUS_team3.jpg`, caption: 'RUS Esport Team Celebration — LENP HOK 2025' },
     ],
   },
   {
@@ -23,9 +25,9 @@ const achievements = [
     result: 'Juara 1 🥇 + MVP Grand Final — Rp35.000.000 Prize Pool',
     color: '#34c759',
     photos: [
-      { src: '/assets/achievements/DSC05645.jpg', caption: 'JUARA 1 + MVP — LENP HOK 2025' },
-      { src: '/assets/achievements/DSC05702.jpg', caption: 'MVP Grand Final — LENP HOK 2025' },
-      { src: '/assets/achievements/DSC05667.jpg', caption: 'Champion Stage — LENP HOK 2025' },
+      { src: `${BASE}assets/achievements/DSC05645.jpg`, caption: 'JUARA 1 + MVP — LENP HOK 2025' },
+      { src: `${BASE}assets/achievements/DSC05702.jpg`, caption: 'MVP Grand Final — LENP HOK 2025' },
+      { src: `${BASE}assets/achievements/DSC05667.jpg`, caption: 'Champion Stage — LENP HOK 2025' },
     ],
   },
   {
@@ -36,8 +38,8 @@ const achievements = [
     result: 'Juara 1 🥇 — Rp35.000.000 Prize Pool',
     color: '#ff9f0a',
     photos: [
-      { src: '/assets/achievements/DSC02904.jpg', caption: 'Medal Ceremony — LENP HOK 2024' },
-      { src: '/assets/achievements/DSC02824.jpg', caption: 'Trophy Lifting — LENP HOK 2024' },
+      { src: `${BASE}assets/achievements/DSC02904.jpg`, caption: 'Medal Ceremony — LENP HOK 2024' },
+      { src: `${BASE}assets/achievements/DSC02824.jpg`, caption: 'Trophy Lifting — LENP HOK 2024' },
     ],
   },
   {

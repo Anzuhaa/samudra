@@ -49,7 +49,7 @@ export default function Hero() {
         </div>
         <div className={styles.imageWrap}>
           <div className={styles.imageContainer}>
-            <img src="/assets/image/IM_04383.jpg" alt="Satria Jagad Samudra" className={styles.profileImg} />
+            <img src={`${import.meta.env.BASE_URL}assets/image/IM_04383.jpg`} alt="Satria Jagad Samudra" className={styles.profileImg} />
           </div>
           <div className={`${styles.floatBadge} ${styles.floatBadge1}`}><span>⚡</span> Backend Dev</div>
           <div className={`${styles.floatBadge} ${styles.floatBadge2}`}><span>🎓</span> UPH 2026</div>
